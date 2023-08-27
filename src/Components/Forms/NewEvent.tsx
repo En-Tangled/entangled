@@ -23,7 +23,7 @@ export const NewEvent = () => {
     const [currency,setCurrency] = useState(0);
     return (
         <Flex className='form-container'>
-            <Container className='form-subcontainer'>
+            <Container className='form-subcontainer' centerContent={true}>
             <Text color='white' fontSize='3xl'>Create New Event</Text>
             <FormControl>
                 <FormLabel fontSize='sm' color='#FFFFFFA6'>Event Name</FormLabel>
@@ -59,7 +59,7 @@ export const NewEvent = () => {
             </FormControl>
             </Container>
             <Spacer/>
-            <Container className='form-subcontainer'>
+            <Container className='form-subcontainer' centerContent={true}>
                 <Text fontSize = '4xl' color='#FFFFFFFF'>{eventName}</Text>
                 <Text fontSize = 'md' color='#FFFFFFFF'>{eventDate}</Text>
                 <Text fontSize = 'md' color='#FFFFFFFF'>{startTime}-{endTime}</Text>
