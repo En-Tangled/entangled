@@ -7,18 +7,20 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  Container,
+  Center,
 } from "@chakra-ui/react"
-import { Logo } from "./Components/Generic/Logo"
 import { Navbar } from "../src/Components/Nav/Navbar";
+import { NewEvent } from "./Components/Forms/NewEvent";
+import { SocialCard } from "./Components/NewEvents/SocialCard";
+import theme from './theme';
+
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Navbar/>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <VStack spacing={8}></VStack>
-      </Grid>
-    </Box>
+    <Center bgColor='#E2E2E2' minHeight="100vh" minWidth="100vw">
+    <SocialCard/>
+    </Center>
   </ChakraProvider>
 )

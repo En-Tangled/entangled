@@ -13,9 +13,9 @@ import {
     useDisclosure,
     useColorModeValue,
     Stack,
+    Text
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from "../Generic/ColorModeSwitcher";
-import { Logo } from "../Generic/Logo";
 
 export const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,7 +25,7 @@ export const Navbar = () => {
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <HStack spacing={8} alignItems={'center'}>
-                        <Logo />
+                        <Text fontSize='2xl'>ENTANGLED</Text>
                         <Button variant="solid" size="md" mr={2} bg={useColorModeValue('gray.100', 'gray.900')}>
                             Buy
                         </Button>

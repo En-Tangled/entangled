@@ -1,0 +1,9 @@
+.form-container{
+    background-color: #232424;
+    border-radius: 8px;
+    max-width:50%
+}
+
+.form-subcontainer{
+    heigth: 100%;
+}
