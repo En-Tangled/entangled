@@ -22,7 +22,7 @@ export const NewEvent = () => {
     const [customUrl,setCustomUrl] = useState('www.test.some.io');
     const [currency,setCurrency] = useState(0);
     return (
-        <Flex className='form-container'>
+        <Flex className='form-container' height='624px' width='800px'>
             <Container className='form-subcontainer' centerContent={true}>
             <Text color='white' fontSize='3xl'>Create New Event</Text>
             <FormControl>
