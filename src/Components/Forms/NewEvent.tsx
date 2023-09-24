@@ -27,9 +27,11 @@ export const NewEvent = () => {
     const changeEventName = (e: ChangeEvent<HTMLInputElement>) => {
         setEventName(e.target.value);
     }
+
     const changeSellerName = (e: ChangeEvent<HTMLInputElement>) => {
         setSellerName(e.target.value);
     }
+
     const changeFloorPrice = (e: ChangeEvent<HTMLInputElement>) => {
         setFloorPrice(parseInt(e.target.value));
     }
@@ -54,6 +56,14 @@ export const NewEvent = () => {
         setCustomUrl(e.target.value);
     }
 
+    const changeEventDate = (e: ChangeEvent<HTMLInputElement>) => {
+        setEventDate(e.target.value);
+    }
+
+    const changeHost = (e: ChangeEvent<HTMLInputElement>) => {
+        setHost(e.target.value);
+    }
+
     return (
         <Flex className='form-container' height='624px' width='800px'>
             <Container className='form-subcontainer' centerContent={true}>
@@ -64,7 +74,7 @@ export const NewEvent = () => {
                 <FormLabel fontSize='sm' color='#FFFFFFA6'>Seller's Name</FormLabel>
                 <Input onChange = {changeSellerName} value = {sellerName} type="text" color='#FFFFFFA6' placeholder='Who is conducting this event' borderRadius = '15px'></Input>
                 <FormLabel fontSize='sm' color='#FFFFFFA6'>Date of Event</FormLabel>
-                <Input type="date" color='#FFFFFFA6' placeholder='Pick a date for this event' borderRadius = '15px'></Input>
+                <Input onChange = {changeEventDate} value = {eventDate} type="date" color='#FFFFFFA6' placeholder='Pick a date for this event' borderRadius = '15px'></Input>
                 <HStack>
                     <Stack>
                     <FormLabel fontSize='sm' color='#FFFFFFA6'>Start Time</FormLabel>
