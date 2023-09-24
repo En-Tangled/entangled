@@ -15,7 +15,7 @@ import { useState, ChangeEvent } from 'react'
 import { eventTypes } from '../../Types/types'
 
 interface newEventFuncProps {
-    newEventHandler(arg: eventTypes):void;
+    newEventHandler(arg: eventTypes): void;
 }
 
 export const NewEvent: React.FC<newEventFuncProps> = (props) => {
@@ -68,15 +68,15 @@ export const NewEvent: React.FC<newEventFuncProps> = (props) => {
 
     const interEvent = () => {
         const temp: eventTypes = {
-        eventName: eventName,
-        sellerName: sellerName,
-        eventDate: eventDate,
-        startTime: startTime,
-        endTime: endTime,
-        floorPrice: floorPrice,
-        currency: currency,
-        huddleLink: eventLink,
-        customUrl: customUrl
+            eventName: eventName,
+            sellerName: sellerName,
+            eventDate: eventDate,
+            startTime: startTime,
+            endTime: endTime,
+            floorPrice: floorPrice,
+            currency: currency,
+            huddleLink: eventLink,
+            customUrl: customUrl
         }
         props.newEventHandler(temp);
     }
@@ -206,7 +206,7 @@ export const NewEvent: React.FC<newEventFuncProps> = (props) => {
             <Container
                 className='form-subcontainer'
                 centerContent={true}
-                marginTop = '104px'
+                marginTop='104px'
                 alignItems='flex-end'
                 marginRight='25px'
             >
@@ -246,10 +246,10 @@ export const NewEvent: React.FC<newEventFuncProps> = (props) => {
                     color='#FFFFFFFF'>
                     {floorPrice} {currency}
                 </Text>
-                <Button 
-                backgroundColor='#D5D4D4'
-                color='#2F3131'
-                onClick={interEvent}>
+                <Button
+                    backgroundColor='#D5D4D4'
+                    color='#2F3131'
+                    onClick={interEvent}>
                     Create Event
                 </Button>
             </Container>
