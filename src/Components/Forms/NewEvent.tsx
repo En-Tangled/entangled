@@ -207,6 +207,8 @@ export const NewEvent: React.FC<newEventFuncProps> = (props) => {
                 className='form-subcontainer'
                 centerContent={true}
                 marginTop = '104px'
+                alignItems='flex-end'
+                marginRight='25px'
             >
                 <Text
                     fontSize='48px'
