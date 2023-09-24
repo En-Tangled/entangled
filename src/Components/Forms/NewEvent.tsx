@@ -8,16 +8,22 @@ import {
     Stack,
     Flex,
     Spacer,
+    Button
 } from '@chakra-ui/react'
 import './NewEvent.css'
 import { useState, ChangeEvent } from 'react'
+import { eventTypes } from '../../Types/types'
 
-export const NewEvent = () => {
+interface newEventFuncProps {
+    newEventHandler(arg: eventTypes):void;
+}
+
+export const NewEvent: React.FC<newEventFuncProps> = (props) => {
+
     const [eventName, setEventName] = useState('');
     const [eventDate, setEventDate] = useState('');
     const [startTime, setStartTime] = useState('');
     const [endTime, setEndTime] = useState('');
-    const [host, setHost] = useState('');
     const [eventLink, setEventLink] = useState('');
     const [customUrl, setCustomUrl] = useState('');
     const [currency, setCurrency] = useState("");
@@ -60,8 +66,19 @@ export const NewEvent = () => {
         setEventDate(e.target.value);
     }
 
-    const changeHost = (e: ChangeEvent<HTMLInputElement>) => {
-        setHost(e.target.value);
+    const interEvent = () => {
+        const temp: eventTypes = {
+        eventName: eventName,
+        sellerName: sellerName,
+        eventDate: eventDate,
+        startTime: startTime,
+        endTime: endTime,
+        floorPrice: floorPrice,
+        currency: currency,
+        huddleLink: eventLink,
+        customUrl: customUrl
+        }
+        props.newEventHandler(temp);
     }
 
     return (
@@ -227,6 +244,12 @@ export const NewEvent = () => {
                     color='#FFFFFFFF'>
                     {floorPrice} {currency}
                 </Text>
+                <Button 
+                backgroundColor='#D5D4D4'
+                color='#2F3131'
+                onClick={interEvent}>
+                    Create Event
+                </Button>
             </Container>
         </Flex>
     )
