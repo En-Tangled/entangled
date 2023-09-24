@@ -14,10 +14,7 @@ export const App = () => (
   <ChakraProvider theme={theme}>
     <Navbar/>
     <Center bgColor='#E2E2E2' minHeight="100vh" minWidth="100vw">
-    {/* <NewEvent/> */}
-    <IntermediateLoader
-    type={1}
-    />
+    <NewEvent/>
     </Center>
   </ChakraProvider>
 )
