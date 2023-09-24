@@ -13,13 +13,13 @@ import './NewEvent.css'
 import { useState, ChangeEvent } from 'react'
 
 export const NewEvent = () => {
-    const [eventName, setEventName] = useState("");
-    const [eventDate, setEventDate] = useState("01/01/2020");
-    const [startTime, setStartTime] = useState('2100');
-    const [endTime, setEndTime] = useState('2300');
+    const [eventName, setEventName] = useState('');
+    const [eventDate, setEventDate] = useState('');
+    const [startTime, setStartTime] = useState('');
+    const [endTime, setEndTime] = useState('');
     const [host, setHost] = useState('');
-    const [eventLink, setEventLink] = useState('test.huddle01');
-    const [customUrl, setCustomUrl] = useState('www.test.some.io');
+    const [eventLink, setEventLink] = useState('');
+    const [customUrl, setCustomUrl] = useState('');
     const [currency, setCurrency] = useState("");
     const [sellerName, setSellerName] = useState('');
     const [floorPrice, setFloorPrice] = useState(0);
@@ -72,8 +72,15 @@ export const NewEvent = () => {
             <Container className='form-subcontainer' centerContent={true}>
                 <Text
                     color='white'
-                    fontSize='3xl'>Create New Event</Text>
-                <FormControl>
+                    fontSize='36px'
+                    fontWeight='700'
+                    marginTop='15px'>
+                    Create New Event
+                </Text>
+                <FormControl
+                    width='352px'
+                    height='440px'
+                    marginTop='30px'>
                     <FormLabel
                         fontSize='sm'
                         color='#FFFFFFA6'>Event Name</FormLabel>
@@ -162,7 +169,7 @@ export const NewEvent = () => {
                     <Input
                         onChange={changeHuddleLink}
                         value={eventLink}
-                        type="number"
+                        type="string"
                         color='#FFFFFFA6'
                         placeholder='Generate a huddle01 link'
                         borderRadius='15px' />
@@ -179,14 +186,47 @@ export const NewEvent = () => {
                 </FormControl>
             </Container>
             <Spacer />
-            <Container className='form-subcontainer' centerContent={true}>
-                <Text fontSize='4xl' color='#FFFFFFFF'>{eventName}</Text>
-                <Text fontSize='md' color='#FFFFFFFF'>{eventDate}</Text>
-                <Text fontSize='md' color='#FFFFFFFF'>{startTime}-{endTime}</Text>
-                <Text fontSize='sm' color='#FFFFFFA6'>{host}</Text>
-                <Text fontSize='sm' color='#FFFFFFA6'>{eventLink}</Text>
-                <Text fontSize='sm' color='#FFFFFFA6'>{customUrl}</Text>
-                <Text fontSize='4xl' color='#FFFFFFFF'>{currency}</Text>
+            <Container
+                className='form-subcontainer'
+                centerContent={true}
+                marginTop = '104px'
+            >
+                <Text
+                    fontSize='48px'
+                    fontWeight='700'
+                    color='#FFFFFFFF'>
+                    {eventName}
+                </Text>
+                <Text
+                    fontSize='24px'
+                    color='#FFFFFFFF'>
+                    {eventDate}
+                </Text>
+                <Text
+                    fontSize='24px'
+                    color='#FFFFFFFF'>
+                    {startTime}-{endTime}
+                </Text>
+                <Text
+                    fontSize='14px'
+                    color='#FFFFFFA6'>
+                    hosted by {sellerName}
+                </Text>
+                <Text
+                    fontSize='14px'
+                    color='#FFFFFFA6'>
+                    {eventLink}
+                </Text>
+                <Text
+                    fontSize='14px'
+                    color='#FFFFFFA6'>
+                    {customUrl}
+                </Text>
+                <Text
+                    fontSize='58px'
+                    color='#FFFFFFFF'>
+                    {floorPrice} {currency}
+                </Text>
             </Container>
         </Flex>
     )
