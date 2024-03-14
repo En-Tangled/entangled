@@ -1,0 +1,152 @@
+body {
+  background: #fcfbff;
+}
+
+.accordionTitle {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: display 0.3s ease-in;
+}
+.accordionTitle + .accordionContent {
+  display: none;
+  transition: display 0.3s ease-in;
+}
+
+.accordionTitle.is-open + .accordionContent {
+  display: block;
+  transition: display 0.3s ease-in;
+}
+
+@media only screen and (max-width: 628px) {
+  .animation-three {
+    height: 35vh;
+  }
+}
+
+/* Set first section to have padding-top equal to navbar height */
+.section-first {
+  margin-top: 128px;
+}
+
+
+.card-team {
+  border-radius: 16px;
+background: var(--bg-l2, #211838);
+}
+
+
+/* Set first section to have padding-top equal to navbar height */
+
+#mc_embed_signup form {
+  margin: 0 !important;
+}
+
+#mc_embed_signup {
+  clear: left;
+  font-family: "Poppins", sans-serif;
+}
+
+#mc_embed_signup .mc-field-group input {
+  padding: 6px 16px;
+  border-radius: 24px;
+  border: 2px solid rgba(253, 248, 255, 0.72);
+  font-size: 12px;
+  line-height: 24px;
+  width: 100% !important;
+  background: transparent;
+}
+
+#mc_embed_signup .mc-field-group input:focus-visible {
+  border: 2px solid #AC9FFF !important;
+}
+
+#mc_embed_signup .submit-button {
+  border-radius: 16px;
+  transition: all 0.23s ease-in-out 0s;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+#mc_embed_signup .mc-field-group {
+  clear: left;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: grid;
+}
+
+#mc_embed_signup .mc-field-group label {
+  padding-left: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  color:rgba(253, 248, 255, 0.66);}
+
+#mc_embed_signup .mc-field-group .mce_inline_error {
+  background-color: transparent !important;
+  font-size: 12px !important;
+
+}
+
+#mc-embedded-subscribe {
+  margin: 0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  margin: 0 !important;
+  padding-left: 16px;
+  color: #FE8A7E;
+  font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+letter-spacing: 0.25px;
+}
+
+#mce-success-response{
+  margin: 0;
+  padding: 8px;
+  font-weight: bold;
+  float: left;
+  z-index: 1;
+  width: 100%;
+  font-size: 12px;
+  color: #55BF85;
+  /* Common Typescale/Body/Small/Default */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+letter-spacing: 0.25px;
+}
+
+#mc_embed_signup div#mce-responses {
+  float: left;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  clear: both;
+}
+
+
+.mce_inline_error {
+  background-color: transparent !important;
+  font-size: 12px !important;
+
+}
+
+#mc_embed_signup input.mce_inline_error {
+  border: 2px solid #FE8A7E !important;
+
+}
+

@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-poppins;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-light-texthigh;
+}
+p {
+  @apply text-light-textmedium;
+}
+
+footer p {
+  @apply text-dark-textmedium;
+}
+/*CTA Card CSS*/
+
+.card {
+  @apply shadow-xl grid rounded-3xl;
+}
+.card:hover {
+  @apply shadow-3xl;
+}
+
+.cta_card {
+  @apply p-6 rounded-3xl bg-light-bg100;
+}
+
+.numbers-grid {
+  @apply p-6 rounded-3xl bg-light-bg100 shadow-xl text-center;
+}
+.ecosystem-card {
+  @apply p-8 rounded-3xl bg-light-bg300;
+}
+
+.moi-apps-logo {
+  @apply filter grayscale hover:filter-none;
+  transition: filter 0.3s ease-in-out;
+}
+.moi-apps-logo:hover {
+  @apply hover:filter-none;
+  transition: filter 0.15s ease-in-out;
+}
+.moi-partners-logo {
+  @apply p-8 rounded-3xl bg-light-bg300 shadow-xl;
+}
+.icon {
+  height: 20px;
+  width: 20px;
+}
+.icon-row {
+  grid-template-columns: 1fr minmax(0px, 24px);
+}
+.moi-contribute-card {
+  @apply p-8 rounded-3xl bg-light-bg300;
+}
+.contribute-icon {
+  @apply p-3 bg-light-actionpdefault rounded-xl h-12 w-12 text-dark-texthigh shadow-2xl;
+}
+.contribute-icon:hover {
+  @apply bg-light-actionphover shadow-4xl;
+}
+/* a {
+    @apply pb-1;
+}
+a:hover {
+    @apply text-dark-textaccent;
+} */
+
+/* Style the header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  transition: background-color 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  z-index: 20;
+}
+/* Set light and dark header colours*/
+.header-light {
+  background: #ffffffe1;
+  box-shadow: 0px 8px 20px rgba(20, 10, 51, 0.05),
+    0px 3px 28px rgba(20, 10, 51, 0.03), 0px 5px 10px rgba(20, 10, 51, 0.07);
+}
+.header-dark {
+  background: #0a0026ee;
+}
+/* This class is removed from the header with JS when it scrolls past the top */
+.header-transparent {
+  background: none;
+  backdrop-filter: blur(0px);
+  box-shadow: none;
+  transition: background-color 0.15s ease-in;
+  transition: box-shadow 0.15s ease-in;
+}
+
+@media (prefers-contrast: high) {
+  .canvas-background {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 628px) and (max-width: 4000px) {
+  canvas {
+    height: 100% !important;
+    align-self: center;
+  }
+}
+.canvas-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+}
+
+.accordionItem {
+  @apply bg-light-bg100 grid gap-24 p-6 shadow-2xl rounded-2xl;
+}
+.faq-container {
+  width: 800px;
+}
+
+@media (max-width: 960px) {
+  .faq-container {
+    width: auto;
+  }
+}
+
+.social-media-icons {
+  @apply grid grid-flow-col justify-center auto-cols-max gap-8;
+}
+
+.profile-card {
+  @apply grid items-center justify-self-center gap-16 text-center;
+}
+
+.technology-icon {
+  @apply text-light-textaccent w-12 h-20 py-4;
+}
+
+.link-20 {
+  @apply h-5 w-5;
+}
+
+.v-line-1 {
+  @apply border-2 h-10 w-1 -mb-2 rounded-md bg-light-textaccent border-light-textaccent;
+}
+
+.v-line-2 {
+  @apply border-2 h-10 w-1 -mt-2 rounded-md bg-light-textaccent border-light-textaccent;
+}
+
+.timeline-disabled {
+  @apply !border-dark-textaccent;
+}
+.timeline-1 {
+  @apply grid gap-16 content-end border-b-4 -mb-[2px] border-light-textaccent justify-items-center w-64 px-12;
+}
+
+.timeline-2 {
+  @apply grid gap-16 content-start border-t-4 -mt-[2px] border-light-textaccent justify-items-center w-64 px-12;
+}
+
+.timeline-0 {
+  @apply grid w-32 px-12;
+}
+
+@media (max-width: 768px) {
+  .timeline-1 {
+    @apply grid gap-4 justify-items-center w-48 px-4;
+  }
+
+  .timeline-0 {
+    @apply grid w-24 px-12;
+  }
+}
+
+.social-icon {
+  @apply h-8 w-8 text-light-textmedium;
+}
+
+.social-icon:hover {
+  @apply text-light-texthigh bg-light-actionshover rounded-3xl;
+}
+
+.social-icon-dark {
+  @apply h-8 w-8 text-dark-textmedium;
+}
+
+.social-icon-dark:hover {
+  @apply text-light-texthigh bg-dark-actionpdefault rounded-3xl;
+}
+
+.news {
+  height: 160px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.news1 {
+  background-image: url("https://images.yourstory.com/cs/121/98e25df018b511e988ceff9061f4e5e7/MOICover-1682314130515.png?w=1152&fm=auto&ar=2:1&mode=crop&crop=faces");
+}
+
+.news2 {
+  background-image: url("https://www.financialexpress.com/wp-content/uploads/2022/12/futuristic-smart-city-with-5g-global-network-technology.jpg");
+}
+
+.news3 {
+  background-image: url("https://inc42.com/wp-content/uploads/2023/03/web3-feature-1-760x570.png");
+}
+
+.news4 {
+  background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixrIbWhWPvXjJI4-FY66D4MJrz2FIdabgsibTTLAybJFwa46MwSJ_USC0ofPvLaxRwkEd-r0WqH8gDNRwn_-8lUWvujjCVP5IgtvIFwNytCGQEQSAr6AQALpOG3ZL4P_ypqISWPxm3Uiwo7QMHDi2MjBVAqAP93zVh50SZYIArQTdODgHChZH1qJZU/s16000/moii-01.jpg");
+}
+
+.typing-para-1 {
+  @apply text-center;
+}
+
+.card gap-16 p-6:hover .icon {
+  @apply text-light-actionpdefault;
+  transition: color 0.15s ease-in;
+}
+
+.icon {
+  transition: color 0.3s ease-in;
+}
+
+.card gap-16 p-8:hover .icon {
+  @apply text-light-actionpdefault;
+  transition: color 0.15s ease-in;
+}
+
+.icon {
+  transition: color 0.3s ease-in;
+}
+
+#three-container {
+  justify-content: center;
+  display: flex;
+  width: 40vw;
+  height: 40vw;
+}
+
+@media (max-width: 768px) {
+  #three-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 80vw;
+    height: 80vw;
+    overflow: hidden;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sec-timeline::-webkit-scrollbar {
+  display: none !important;
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
